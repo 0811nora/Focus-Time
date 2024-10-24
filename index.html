@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Iceland&family=Inconsolata:wght@200..900&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+    
+    <title>Focus Time</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="main">
+        <div class="data-and-week">
+            <h3 class="new-date"></h3>
+        </div>
+        <div class="current-time">
+            <span class="utc"></span>
+            <h1 class="time"></h1>
+        </div>
+        <div class="pomodoro">
+            
+            <h2 class="time-title">Pomodoro Click</h2>
+            <h3 class="count-down"></h3>
+            <div class="button">
+                <button class="set-focus"><i class='bx bxs-cog'></i> Focus</button>
+                <button class="btn-start "><i class='bx bx-play' ></i></button>
+                <button class="btn-stop"><i class='bx bx-stop' ></i></button>
+                <button class="set-rest"><i class='bx bxs-cog'></i> Rest</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="particles.js"></script>
+    <script src="all.js"></script>
+    <script src="sweetalert2.all.js"></script>
+
+</body>
+</html>
+
+
+<!-- todo:
+
+V 2. alart 通知畫面
+V 3. 番茄鐘按鈕
+V 4. 番茄中的抬頭要跟著設定時間換
+V 5. 在倒數的狀態下，設定鈕要禁能，若點擊可以跳提示  
+
+V 1. 背景ramdom
+V 6. 番茄中背景 區塊模糊
+V 7. 按鈕設計(按鈕區塊模糊)
+8.RWD
+-->

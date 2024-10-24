@@ -1,0 +1,200 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+
+
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+
+
+body{
+	position: relative;
+	font-family: "Iceland", sans-serif;
+	font-style: normal;
+	color: #e3e3e3;
+	overflow: hidden;
+	height: 100vh; 
+
+	
+
+}
+
+
+
+#particles-js {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-color: #181A27;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%; /* 寬度 100% */
+	height: 100vh; /* 高度 100% */
+	overflow: hidden;
+	z-index: -1;
+}
+
+.landscape-message {
+	display: none;
+}
+
+.main{
+	text-align: center;
+	display: block; 
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 100vh;
+
+}
+
+
+.new-date{
+	font-size: 7vw;
+	white-space: nowrap;
+	padding: 10px;
+	margin-top: auto;
+	color: rgba(255, 255, 255, 0.6);
+	
+}
+
+.utc{
+	font-size: 3vw;
+	color: rgba(255, 255, 255, 0.6);
+
+
+}
+
+.time{
+	font-size: 25vw;
+	font-weight: bolder;
+	line-height: 20vw;
+}
+
+.count-down{
+	font-size: clamp(24px, 9vw, 200px);
+	padding: 10px 0  15px;
+	font-weight: bolder;
+}
+
+.time-title{
+	font-size: 3vw;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+.no-start{
+	display: none;
+}
+
+.pomodoro{
+	padding: 10px 0 30px;
+	
+}
+
+
+
+button{
+	background-color:rgba(63, 63, 72, 0.6); 
+	color: #e3e3e3;
+	border: none;
+	border-radius: 5px;
+	margin: 10px;
+	margin-top: auto;
+	font-family: "Iceland", sans-serif;
+	
+	
+}
+
+
+
+button:hover{
+	background-color:rgba(255, 255, 255, 0.5); 
+	color: #181A27;
+
+}
+
+button:disabled {
+	background-color: rgba(137, 137, 137, 0.4); 
+	color: #aaa; 
+	cursor: not-allowed; /* 顯示禁止圖示 */
+	opacity: 0.8; 
+}
+
+.btn-start ,.btn-stop  {
+	background-color:rgba(100, 212, 212, 0.4); 
+
+
+}
+
+
+.btn-start i,.btn-stop i {
+	max-width: 80px; /* 最大寬度 */
+	width: 7vw;
+	height: 40px;
+	padding-top: 8px;
+	font-size: 19pt;
+
+}
+
+.set-focus, .set-rest{
+	font-size: 20px;
+	padding: 5px;
+}
+
+.set-focus i, .set-rest i{
+	font-size: 15px;
+}
+
+
