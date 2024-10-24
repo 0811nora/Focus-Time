@@ -23,10 +23,10 @@ let minutes;
 let seconds;
 
 
-const restSound = new Audio("material/rest.wav"); // 加入音頻
+const restSound = new Audio("material/rest.mp3"); // 加入音頻
 restSound.volume = 0.7; // 設定音量大小0.0 ~ 1.0
 
-const startSound = new Audio("material/Start.wav");
+const startSound = new Audio("material/Start.mp3");
 startSound.volume = 0.7;
 
 let defaulcountDownTime = countDown.innerHTML = `${Math.floor(startNum / 60)}:${startNum % 60 < 10 ? '0' : ''}${startNum % 60}`; 
