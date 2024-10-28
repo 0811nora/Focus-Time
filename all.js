@@ -23,7 +23,7 @@ const disableAll = document.querySelector(".disable-all");
 
 let startTimer;
 let restTimer;
-let defaulFocusTime = 1500; //這邊單位為秒
+let defaulFocusTime = 1500; //單位為秒
 let defaulRestTime = 300;
 let focusNum = defaulFocusTime;
 let restNum = defaulRestTime;
@@ -33,8 +33,6 @@ let formattedTime;
 let hours;
 let minutes;
 let seconds;
-// let newFocusTime;
-let newRestTime;
 
 
 const restSound = new Audio("material/rest.mp3"); // 加入音頻
@@ -61,7 +59,9 @@ particlesJS.load('particles-js', 'particlesjs-config.json', function() {
 
 
 
-//-------設定時區、日期、時間-------
+//-------取得時區、日期、時間-------
+
+
 function updateTime(){
     let today = new Date();  //回傳當前的 timestamp（毫秒），這個毫秒是從 1970 年 1 月 1 日累積至當下的毫秒數
     let utc = today.getTimezoneOffset();
@@ -111,6 +111,8 @@ setInterval(updateTime, 1000);
 updateTime();
 
 
+
+
 //------倒數計時器------
 
 //定義主要轉碼成一般顯示的小時/分鐘/秒數
@@ -128,12 +130,14 @@ function updateCountDown (timeInSeconds){
     countDown.innerHTML = formattedTime;
 }
 
-// 按下[開始計時鍵]執行
-function start(){
 
+
+// 按下[開始計時鍵]時執行
+function start(){
     focusNum = setFocusTime ? parseInt(setFocusTime) * 60 : defaulFocusTime;
     updateCountDown(focusNum); 
     // 函式的變數focusNum所設定的時間，可能是預設也可能是使用者設定後的值
+    
 
     if(setFocusTime){ 
         timeTitle.textContent = `Focus Time ${setFocusTime} Mins`;
@@ -241,8 +245,6 @@ btnStop.addEventListener("click", function(){
     }else{
         countDown.innerHTML = defaulcountDownTime;
     } //按下停止鍵時，如果有設定過時間，那就顯示設定的時間，如果沒有設定過，就是顯示預設的時間。
-
-    
         
 })
 
@@ -253,7 +255,7 @@ function setNewFocusTime(){
     setFocusTime = setFocusInput.value;
     console.log(setFocusTime);
 
-    if(setFocusTime && !isNaN(setFocusTime) && parseFloat(setFocusTime) > 1){
+    if(setFocusTime && !isNaN(setFocusTime) && parseFloat(setFocusTime) >= 1){
         timeTitle.textContent = `Focus Time ${setFocusTime} Mins`;
         setFocusMessage.innerHTML = "Set successfully !";
         setFocusMessage.style.color = "#31ea37";
@@ -332,6 +334,7 @@ function restEnter(event){
 // 設定foucs Time(專注時間)
 setFocus.addEventListener("click",function(){
     disableAll.style.display = 'block';
+    // 設定視窗跳出來時，背景壓黑
     setRestArea.classList.remove("area");
     setFocusArea.classList.add("area");
     setFocusMessage.innerHTML = "(Enter minutes)";
@@ -383,12 +386,3 @@ setRest.addEventListener("click",function(){
     
 
 
-// TO DO
-// V  1. 設定框改到中間 
-// V  2. 設定時間以後，按在play 再次設定會跑版
-// V  3. input 為什麼沒辦法輸入英文?
-// V. 4. 設定小時的時間以後，按下停止，他會變成分鐘的時間計算
-// V  5. rest的設定時間還沒有寫
-// V  6. 設定時間十，會出現紅字
-// 7. 按 enter會出現紅字
-// 8. 手機使用沒有音效
