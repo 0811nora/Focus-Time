@@ -69,6 +69,17 @@ body{
 
 }
 
+.disable-all{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #010918aa;
+	z-index: 2;
+}
+
 
 
 #particles-js {
@@ -159,6 +170,7 @@ body{
 	width: 40%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	z-index: 3;
 	
 }
 
@@ -183,6 +195,7 @@ body{
 	font-size: clamp(12px, 1.5vw, 50px);
 	border-radius: 5px;
 	border: none;
+	
 
 }
 
@@ -191,6 +204,7 @@ body{
 	margin: 2px 0 0 15px !important;
 	background-color: #008E8F ;
 	font-size: clamp(12px, 1.5vw, 50px);
+	
 }
 
 .close-focus-btn, .close-rest-btn{
@@ -200,6 +214,7 @@ body{
 	padding: 0.5vw;
 	background-color: #008E8F ;
 	font-size: clamp(12px, 1.5vw, 50px);
+	
 }
 
 .close-focus-btn:hover, .close-rest-btn:hover{

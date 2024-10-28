@@ -17,6 +17,7 @@ const closeFocusBtn = document.querySelector(".close-focus-btn");
 const closeRestBtn = document.querySelector(".close-rest-btn");
 const setFocusMessage = document.querySelector(".set-focus-message");
 const setRestMessage = document.querySelector(".set-rest-message");
+const disableAll = document.querySelector(".disable-all");
 
 
 
@@ -330,6 +331,8 @@ function restEnter(event){
 
 // 設定foucs Time(專注時間)
 setFocus.addEventListener("click",function(){
+    disableAll.style.display = 'block';
+    setRestArea.classList.remove("area");
     setFocusArea.classList.add("area");
     setFocusMessage.innerHTML = "(Enter minutes)";
     setFocusMessage.style.color = "#dddddd";
@@ -347,6 +350,7 @@ setFocus.addEventListener("click",function(){
         setFocusInput.value = "";
         setFocusMessage.innerHTML = "";
         setFocusArea.classList.remove("area");
+        disableAll.style.display = 'none';
     })
 });
 
@@ -355,6 +359,8 @@ setFocus.addEventListener("click",function(){
 
 // 設定Rest Time(休息時間)
 setRest.addEventListener("click",function(){
+    disableAll.style.display = 'block';
+    setFocusArea.classList.remove("area");
     setRestArea.classList.add("area");
     setRestMessage.innerHTML = "(Enter minutes)";
     setRestMessage.style.color = "#dddddd";
@@ -370,6 +376,7 @@ setRest.addEventListener("click",function(){
         setRestInput.value = "";
         setRestMessage.innerHTML = "";
         setRestArea.classList.remove("area");
+        disableAll.style.display = 'none';
     })
 });
 
