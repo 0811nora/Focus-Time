@@ -252,7 +252,7 @@ function setNewFocusTime(){
     setFocusTime = setFocusInput.value;
     console.log(setFocusTime);
 
-    if(setFocusTime && !isNaN(setFocusTime) && parseFloat(setFocusTime) > 0){
+    if(setFocusTime && !isNaN(setFocusTime) && parseFloat(setFocusTime) > 1){
         timeTitle.textContent = `Focus Time ${setFocusTime} Mins`;
         setFocusMessage.innerHTML = "Set successfully !";
         setFocusMessage.style.color = "#31ea37";
@@ -270,8 +270,8 @@ function setNewFocusTime(){
 
         updateCountDown(focusNum);
 
-    }else if( parseFloat(setFocusTime) <= 0 ){
-        setFocusMessage.innerHTML = "The number must be greater than 0.";
+    }else if( parseFloat(setFocusTime) <= 1 ){
+        setFocusMessage.innerHTML = "The number must be greater than 1.";
         setFocusMessage.style.color = "yellow";
         setFocusInput.value = "";
 
@@ -289,7 +289,7 @@ function setNewRestTime(){
     setRestTime = setRestInput.value;
     console.log(setRestTime);
 
-    if(setRestTime && !isNaN(setRestTime) && parseFloat(setRestTime) > 0){
+    if(setRestTime && !isNaN(setRestTime) && parseFloat(setRestTime) > 1){
         timeTitle.textContent = `Focus Time ${setRestTime} Mins`;
         setRestMessage.innerHTML = "Set successfully !";
         setRestMessage.style.color = "#31ea37";
@@ -299,8 +299,8 @@ function setNewRestTime(){
         defaulRestTime = restNum; 
         updateCountDown(restNum);
 
-    }else if( parseFloat(setRestTime) <= 0 ){
-        setRestMessage.innerHTML = "The number must be greater than 0.";
+    }else if( parseFloat(setRestTime) <= 1 ){
+        setRestMessage.innerHTML = "The number must be greater than 1.";
         setRestMessage.style.color = "yellow";
         setRestInput.value = "";
     }else{
