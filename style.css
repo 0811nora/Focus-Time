@@ -69,7 +69,9 @@ body{
 
 }
 
-.disable-all{
+
+/* 設定時的背景遮罩 */
+.disable-all{  
 	display: none;
 	position: fixed;
 	top: 0;
