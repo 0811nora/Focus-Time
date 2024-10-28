@@ -62,11 +62,10 @@ body{
 	position: relative;
 	font-family: "Iceland", sans-serif;
 	font-style: normal;
-	color: #e3e3e3;
+	color: #dddddd;
 	overflow: hidden;
 	height: 100vh; 
-
-	
+	width: 100%;
 
 }
 
@@ -141,8 +140,77 @@ body{
 .pomodoro{
 	padding: 10px 0 30px;
 	
+	
 }
 
+
+
+
+
+.set-focus-area,.set-rest-area {
+	display: none;
+	position: absolute;
+	top: 50%;
+	background-color: rgba(24, 26, 39, 0.7);
+	padding: 2%;
+	font-size: clamp(20px, 4vw, 80px);
+	border: #d2d2d2 1px solid;
+	border-radius: 5px;
+	width: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+
+.area{
+	display: block;
+	
+}
+
+
+
+.set-focus-number, .set-rest-number{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 3% 0;
+	
+}
+
+.set-focus-number input, .set-rest-number input{
+	width: 60%;
+	padding: 0.8vw;
+	font-size: clamp(12px, 1.5vw, 50px);
+	border-radius: 5px;
+	border: none;
+
+}
+
+.set-focus-btn, .set-rest-btn{
+	padding: 0.9vw;
+	margin: 2px 0 0 15px !important;
+	background-color: #008E8F ;
+	font-size: clamp(12px, 1.5vw, 50px);
+}
+
+.close-focus-btn, .close-rest-btn{
+	position: absolute;
+	top: -10px;
+	right: -20px;
+	padding: 0.5vw;
+	background-color: #008E8F ;
+	font-size: clamp(12px, 1.5vw, 50px);
+}
+
+.close-focus-btn:hover, .close-rest-btn:hover{
+	background-color:rgba(255, 255, 255, 0.897); 
+	color: #181A27;
+}
+
+.set-focus-message, .set-rest-message{
+	font-size: clamp(20px, 2.5vw, 50px);
+	font-weight: 200;
+}
 
 
 button{
@@ -153,9 +221,9 @@ button{
 	margin: 10px;
 	margin-top: auto;
 	font-family: "Iceland", sans-serif;
-	
-	
 }
+
+
 
 
 
@@ -172,6 +240,8 @@ button:disabled {
 	opacity: 0.8; 
 }
 
+
+
 .btn-start ,.btn-stop  {
 	background-color:rgba(100, 212, 212, 0.4); 
 
@@ -185,16 +255,21 @@ button:disabled {
 	height: 40px;
 	padding-top: 8px;
 	font-size: 19pt;
-
 }
 
 .set-focus, .set-rest{
+	width: 80px;
 	font-size: 20px;
 	padding: 5px;
+	padding-top: 8px;
+	
 }
 
 .set-focus i, .set-rest i{
 	font-size: 15px;
+	
 }
+
+
 
 
