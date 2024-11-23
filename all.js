@@ -38,7 +38,7 @@ let seconds;
 const restSound = new Audio("material/rest.mp3"); // 加入音頻
 restSound.volume = 0.8; // 設定音量大小0.0 ~ 1.0
 
-const startSound = new Audio("material/Start.mp3");
+const startSound = new Audio("material/start.mp3");
 startSound.volume = 0.8;
 
 let defaulcountDownTime = countDown.innerHTML = `${Math.floor(focusNum / 60)}:${focusNum % 60 < 10 ? '0' : ''}${focusNum % 60}`; 
