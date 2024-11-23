@@ -190,9 +190,7 @@ function restTiming(){
             focusNum = defaulFocusTime; 
 
             startSound.play();
-
             start();// 回到focus時間計時
-
             Swal.fire(" Focus Time !");
 
         }
