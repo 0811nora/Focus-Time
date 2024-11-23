@@ -36,10 +36,10 @@ let seconds;
 
 
 const restSound = new Audio("material/rest.mp3"); // 加入音頻
-restSound.volume = 0.7; // 設定音量大小0.0 ~ 1.0
+restSound.volume = 0.8; // 設定音量大小0.0 ~ 1.0
 
 const startSound = new Audio("material/Start.mp3");
-startSound.volume = 0.7;
+startSound.volume = 0.8;
 
 let defaulcountDownTime = countDown.innerHTML = `${Math.floor(focusNum / 60)}:${focusNum % 60 < 10 ? '0' : ''}${focusNum % 60}`; 
 //使用 Math.floor 取得 focusNum 轉換成的分鐘數
@@ -176,7 +176,7 @@ function restTiming(){
     updateCountDown(restNum); //更新時間為:"休息時間"的設定時間或預設時間
 
     if(setRestTime){ //
-        timeTitle.textContent = `Rest Time ${setRestTime} Mins`;;
+        timeTitle.textContent = `Rest Time ${setRestTime} Mins`;
     }else{
         timeTitle.textContent = `Rest Time ${minutes} Mins`;
     }//如果有設定[Rest Time]，就顯示設定的時間，沒有就顯示預設的時間。
