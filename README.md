@@ -30,4 +30,9 @@
   - **動態狀態切換**：根據倒數結束自動切換至休息或專注模式。  
 
 ## ◾作品展示  
- 
+- 整體畫面
+  ![image](https://github.com/user-attachments/assets/9987844d-6f66-4c68-90e5-1adde88060be)
+
+- 設定倒數時間
+  ![image](https://github.com/user-attachments/assets/26a0f73f-5714-4bb8-b4f4-ae6c8d4625dc)
+
